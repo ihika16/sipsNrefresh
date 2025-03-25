@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Juice</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #fffbea; }
+        header { background-color: #4CAF50; padding: 20px; color: white; font-size: 24px; }
+        button { background-color: #FF4500; color: white; padding: 12px 20px; font-size: 18px; border-radius: 5px; margin: 20px; cursor: pointer; }
+        button:hover { background-color: #d93800; }
+    </style>
+</head>
+<body>
+
+    <header>🍏 Apple Juice</header>
+
+    <div>
+        <img src="https://www.organicfacts.net/wp-content/uploads/applejuice.jpg" width="300px">
+        <h2>Refreshing Apple Juice 🍏</h2>
+        <p>Price: ₹229</p>
+        <button onclick="addToCart('Apple Juice', 229)">🛒 Add to Cart</button>
+        <button onclick="location.href='checkout.html'">🛒 Proceed to Checkout</button>
+        <button onclick="location.href='index.html'">⬅ Back to Home</button>
+    </div>
+
+    <script>
+        function addToCart(item, price) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.push({ item: item, price: parseFloat(price) });
+            localStorage.setItem("cart", JSON.stringify(cart));
+            alert(item + " added to cart!");
+        }
+    </script>
+
+</body>
+</html>

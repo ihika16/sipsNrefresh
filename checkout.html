@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛒 Checkout - Fresh Juice</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #fffbea; }
+        header { background-color: #FF4500; padding: 15px; color: white; font-size: 22px; }
+        .container { margin-top: 50px; }
+        button {
+            background-color: #6ea728;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 20px;
+        }
+        button:hover { background-color: #218838; }
+    </style>
+</head>
+<body>
+
+    <header>🛒 Secure Checkout</header>
+
+    <div class="container">
+        <h2>Complete Your Order.</h2>
+        <p>Total: ₹199 for Fresh Juice 🍹</p>
+        
+        <!-- Place Order Button for Cash on Delivery -->
+        <button onclick="placeOrder()">🛒 Place Order (Cash on Delivery)</button>
+        <br>
+        <button onclick="location.href='index.html'">⬅ Back to Home</button>
+        <br>
+        <br>
+        <br>
+        <p align:center>soon it will be in your place.......</p>
+
+    </div>
+
+    <script>
+        function placeOrder() {
+            alert("Your order has been placed successfully now!\nYou will pay on delivery.");
+            location.href = "success.html"; // Redirect to a success page
+        }
+    </script>
+
+</body>
+</html>
